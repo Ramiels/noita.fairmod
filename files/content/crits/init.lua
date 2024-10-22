@@ -3,7 +3,7 @@
 
 local M = {}
 
----@param player entity_id
+---@param player number
 function M.OnPlayerSpawned(player)
 	EntityAddComponent2(player, "LuaComponent", {
 		execute_every_n_frame = -1,

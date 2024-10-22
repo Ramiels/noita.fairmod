@@ -13,11 +13,12 @@ function GetPlayers()
 	return MergeTables(EntityGetWithTag("player_unit") or {}, EntityGetWithTag("polymorphed_player") or {}) or {}
 end
 
-function GetEnemiesInRadius(x, y, radius)
-	local entities =
-		MergeTables(EntityGetInRadiusWithTag(x, y, radius, "enemy"), EntityGetInRadiusWithTag(x, y, radius, "boss"))
+function GetPlayersInRadius(x, y, radius)
+	return MergeTables(EntityGetInRadiusWithTag(x, y, radius, "player_unit"), EntityGetInRadiusWithTag(x, y, radius, "polymorphed_player")) or {}
+end
 
-	return entities
+function GetEnemiesInRadius(x, y, radius)
+	return MergeTables(EntityGetInRadiusWithTag(x, y, radius, "enemy"), EntityGetInRadiusWithTag(x, y, radius, "boss"))
 end
 
 function MaterialsFilter(mats)

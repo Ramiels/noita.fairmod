@@ -234,6 +234,10 @@ function OnPlayerDied(player)
 	end
 end
 
+
+ModLuaFileAppend("data/scripts/perks/perk_list.lua", "mods/noita.fairmod/files/content/sort_progress/perk.lua")
+ModLuaFileAppend("data/scripts/gun/gun_actions.lua", "mods/noita.fairmod/files/content/sort_progress/actions.lua")
+
 -- Copi was here
 -- Dexter is here
 -- Moldos was here
